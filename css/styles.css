@@ -10,6 +10,7 @@
   --accent-color: #2196f3;
   --secondary-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
+  --fourth-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -114,6 +115,8 @@ height: auto;
 }
 .navi-contact-mail,
 .navi-contact-tel {
+  display: flex;
+  align-items: center;
   color: var(--primery-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -129,6 +132,11 @@ height: auto;
 .navi-list .navi-item-link.current {
   color: var(--accent-color);
 }
+.navi-icon {
+  fill: currentColor;
+
+  margin-right: 10px;
+}
 /* Hero */
 .hero {
   padding-top: 200px;
@@ -138,6 +146,15 @@ height: auto;
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--primery-white-color);
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url(../images/Img17.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 .hero-title {
   width: 696px;
@@ -176,6 +193,18 @@ height: auto;
 }
 .hang-item:last-child {
   margin-right: 0;
+}
+
+.hang-box {
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--third-bg-color);
+  border-radius: 4px;
+}
+
+.hang-icon {
+  margin: 25px 100px;
 }
 .hang-subtitle {
   margin-bottom: 10px;
@@ -254,10 +283,80 @@ height: auto;
   text-align: center;
 }
 .teammate-major {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
+.team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.team-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primery-text-color);
+}
+.team-icon-link:not(:last-child) {
+  margin-right: 10px;
+}
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--accent-color);
+}
+.team-icon {
+  fill: currentColor;
+}
+.team-icon-link:hover .team-icon,
+.team-icon-link:focus .team-icon {
+fill: var(--primery-white-color);
+}
+
+/* Clients */
+.clients-title {
+  margin-bottom: 50px;
+  
+  color: var(--primery-title-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+}
+.clients-list {
+  display: flex;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--primery-text-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  color: var(--primery-text-color);
+  
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
 /* Page */
 .page {
   padding-top: 94px;
@@ -291,6 +390,10 @@ height: auto;
 .page-filters-btn:focus {
   background-color: var(--accent-color);
   color: var(--primery-white-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+   0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+   0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  
 }
 .page-list {
   display: flex;
@@ -310,6 +413,14 @@ height: auto;
 }
 .page-item-link {
   text-decoration: none;
+  display: block;
+}
+.page-item-link:hover,
+.page-item-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+   0px 4px 4px rgba(0, 0, 0, 0.06),
+   1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 .page-item-box {
   padding: 20px 24px;
@@ -338,6 +449,13 @@ height: auto;
   background-color: var(--secondary-bg-color);
   color: var(--primery-white-color);
 
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.address-box {
+  margin-right: 70px;
 }
 .footer-logo {
   margin-bottom: 20px;
@@ -385,3 +503,37 @@ height: auto;
 .footer-tel:focus {
   color: var(--accent-color);
 }
+.footer-social-box {
+
+}
+.footer-social-text {
+font-weight: 700;
+text-transform: uppercase;
+margin-bottom: 20px;
+
+
+}
+.footer-social-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primery-title-color);
+  background:var(--fourth-bg-color)
+  
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+.footer-icon {
+  fill: var(--primery-white-color);
+}
+
